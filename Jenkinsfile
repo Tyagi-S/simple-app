@@ -1,6 +1,9 @@
 pipeline {
    agent any
-
+       tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "M3"
+    }
    environment {
        // use your actual issuer URL here and NOT the placeholder {yourOktaDomain}
        OKTA_OAUTH2_ISSUER           = 'https://dev-16227572.okta.com/oauth2/default'
