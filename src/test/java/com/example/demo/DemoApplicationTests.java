@@ -45,7 +45,7 @@ public class DemoApplicationTests {
         this.mvc.perform(get("/")
                 .with(authentication(createMockOAuth2AuthenticationToken(idToken))))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(content().string("Welcome, user"));
+                .andExpect(content().string("Welcome, null"));
     }
 
     private OAuth2AuthenticationToken createMockOAuth2AuthenticationToken(OidcIdToken idToken) {
