@@ -1,7 +1,6 @@
 pipeline {
    agent any
-      triggers { pollSCM('H/15 * * * *
-      ') } // poll every 15 minutes
+      triggers { pollSCM('H/15 * * * *') } // poll every 15 minutes
        tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "M3"
