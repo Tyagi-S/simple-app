@@ -42,7 +42,7 @@ public class DemoApplicationTests {
     @Test
     void testGreet() throws Exception {
         OidcIdToken idToken = createOidcToken();
-        this.mvc.perform(get("/greeting")
+        this.mvc.perform(get("/")
                 .with(authentication(createMockOAuth2AuthenticationToken(idToken))))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(content().string("Hello user@email.com"));
